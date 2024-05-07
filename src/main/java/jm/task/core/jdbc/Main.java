@@ -18,9 +18,7 @@ public class Main {
         userService.saveUser("Name3", "LastName3", (byte) 31);
         userService.saveUser("Name4", "LastName4", (byte) 38);
 
-        List<User> allUsers = userService.getAllUsers();
-        Stream<User> stream = allUsers.stream();
-        stream.forEach(System.out::println);
+        userService.getAllUsers();
         userService.removeUserById(1);
         userService.cleanUsersTable();
         userService.dropUsersTable();
